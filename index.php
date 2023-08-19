@@ -35,37 +35,24 @@ if (!($name && $id)) {
     <link rel="apple-touch-icon-precomposed" href="favicon.png" />
     <link rel= "apple-touch-startup-image" href= "favicon.png" />
 <style>
-.logout-button,
-#sub {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 10px;
-}
 
-.logout-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-</style>
 
 <script>document.oncontextmenu=function(){return false}</script>
 
 </head>
 <body>
 <div class="bg">
-<script src="js/bg.js"></script>
+  <script src="js/bg.js"></script>
   <div class="chatBase">
     <div id="msgBox"></div>
     <div>
-      <input value='Type whatever you want to say' onFocus="value = value == defaultValue ? '' : value;" onBlur="value = value == '' ? defaultValue : value;"  id="inputMessage" type="text" autocomplete="off" />
       <span id="sub" class="waves-effect waves-light" onclick="send();">Send</span>
+      <span class="logout-button">
+        <button class="waves-effect waves-light" onclick="logout()">Logout</button>
+      </span>
+      <input value='Type whatever you want to say' onFocus="value = value == defaultValue ? '' : value;" onBlur="value = value == '' ? defaultValue : value;"  id="inputMessage" type="text" autocomplete="off" />
     </div>
   </div>
-  <div class="logout-button">
-    <button class="waves-effect waves-light" onclick="logout()">Logout</button>
-  </div>
-</div>
 
     <script>
       if (document.documentMode) {
